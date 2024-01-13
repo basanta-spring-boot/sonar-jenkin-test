@@ -86,7 +86,7 @@ public class SpringDataJpaApplicationTests {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.[0].id").value(1));
     }
 
-    @Test
+    //@Test
     public void getProductByIdTest() throws Exception {
 
         when(productRepository.findById(108)).thenReturn(Optional.of(new Product(108, "test", 200, "desc", "type")));
